@@ -9,100 +9,124 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-  <nav class="menu js-menu">
-    <ul>
-      <li><a href="#animais">Animais</a></li>
-      <li><a href="#faq">Faq</a></li>
-      <li><a href="#contato">Contato</a></li>
-      <li><a href="https://www.linkedin.com/in/ricardo-queiroz-826656231/">Dev →</a></li>
-    </ul>
-  </nav>
-  <section class="grid-section animais js-scroll" id="animais">
-    <h1 class="titulo">Animais Fantásticos</h1>
-    <ul class="animais-lista js-tabmenu">
-      <li>
-        <img src="img/imagem1.jpg">
-      </li>
-      <li>
-        <img src="img/imagem2.jpg">
-      </li>
-      <li>
-        <img src="img/imagem3.jpg">
-      </li>
-      <li>
-        <img src="img/imagem4.jpg">
-      </li>
-      <li>
-        <img src="img/imagem5.jpg">
-      </li>
-      <li>
-        <img src="img/imagem6.jpg">
-      </li>
-    </ul>
-    <div class="animais-descricao js-tabcontent">
-      <section>
-        <h2>Raposa</h2>
-        <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
-          por um focinho comprido e uma cauda longa e peluda.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
-        <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do
-          qual a raposa vermelha é a mais comum.</p>
-        <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
-      </section>
-      
-      <section>
-        <h2>Esquilo</h2>
-        <p>Os esquilos são roedores arborícolas conhecidos por suas caudas felpudas e hábitos alimentares que incluem nozes, sementes e frutas. Pertencentes à família Sciuridae, os esquilos apresentam características distintivas, como dentes incisivos afiados e patas adaptadas para escalar.</p>
-      </section>
-      <section>
-        <h2>Urso</h2>
-        <p>Os ursos, mamíferos da família Ursidae, são animais imponentes e omnívoros, caracterizados por garras poderosas e um focinho largo. Dentre as oito espécies de ursos existentes, o urso-pardo e o urso-polar são notáveis pela sua adaptabilidade a diferentes ambientes.</p>
-      </section>
-      <section>
-        <h2>Lobo</h2>
-        <p>Os lobos, membros da família Canidae, são predadores sociais e altamente adaptáveis. Caracterizados por pelagem espessa e uivos distintivos, os lobos pertencem ao gênero Canis, sendo o lobo-cinzento a espécie mais conhecida, formando grupos coesos conhecidos como alcateias.</p>
-      </section>
-      <section>
-        <h2>Macaco</h2>
-        <p>Os macacos, pertencentes à ordem dos primatas, são animais sociais e altamente inteligentes. Com mãos preênseis, cérebros desenvolvidos e caudas variáveis, os macacos exibem uma diversidade notável. Espécies como o macaco-prego e o chimpanzé são exemplos marcantes dessa ampla família.</p>
-      </section>
-      <section>
-        <h2>Leão</h2>
-        <p>Os leões, membros da família Felidae, são felinos majestosos e carnívoros conhecidos por suas crinas nos machos. Pertencentes ao gênero Panthera, o leão é o único felino social, vivendo em grupos chamados de "coalizões" que consistem em leões adultos e suas companheiras, marcando sua presença nas savanas africanas.</p>
-      </section>
-    </div>
+  <div class="grid-container">
+    <nav class="menu js-menu">
+      <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
+      <ul data-menu="list" id="menu">
+        <li><a href="#animais">Animais</a></li>
+        <li data-dropdown>
+          <a href="sobre.html">Sobre</a>
+          <ul class="dropdown-menu">
+            <li><a href="empresa.html">Empresa</a></li>
+            <li><a href="equipe.html">Equipe</a></li>
+            <li><a href="socios.html">Socios</a></li>
+          </ul>
+        </li>
+        <li><a href="#faq">Faq</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a data-modal="abrir" href="login.html">Login →</a></li>
+      </ul>
+    </nav>
+    <section class="grid-section animais" data-anime="scroll" id="animais">
+      <h1 class="titulo">Animais Fantásticos</h1>
+      <ul class="animais-lista" data-tab="menu">
+        <li>
+          <img src="img/imagem1.jpg">
+        </li>
+        <li>
+          <img src="img/imagem2.jpg">
+        </li>
+        <li>
+          <img src="img/imagem3.jpg">
+        </li>
+        <li>
+          <img src="img/imagem4.jpg">
+        </li>
+        <li>
+          <img src="img/imagem5.jpg">
+        </li>
+        <li>
+          <img src="img/imagem6.jpg">
+        </li>
+      </ul>
+      <div class="animais-descricao" data-tab="content">
+        <section data-anime="show-right">
+          <h2>Raposa</h2>
+          <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados
+            por um focinho comprido e uma cauda longa e peluda.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+          <p>De cerca de 40 espécies reconhecidas como raposas, somente 12 pertencem ao gênero Vulpes das "raposas verdadeiras", do
+            qual a raposa vermelha é a mais comum.</p>
+          <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</p>
+        </section>
+        
+        <section data-anime="show-right">
+          <h2>Esquilo</h2>
+          <p>Os esquilos são roedores arborícolas conhecidos por suas caudas felpudas e hábitos alimentares que incluem nozes, sementes e frutas. Pertencentes à família Sciuridae, os esquilos apresentam características distintivas, como dentes incisivos afiados e patas adaptadas para escalar.</p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Urso</h2>
+          <p>Os ursos, mamíferos da família Ursidae, são animais imponentes e omnívoros, caracterizados por garras poderosas e um focinho largo. Dentre as oito espécies de ursos existentes, o urso-pardo e o urso-polar são notáveis pela sua adaptabilidade a diferentes ambientes.</p>
+        </section>
+        <section data-anime="show-down">
+          <h2>Lobo</h2>
+          <p>Os lobos, membros da família Canidae, são predadores sociais e altamente adaptáveis. Caracterizados por pelagem espessa e uivos distintivos, os lobos pertencem ao gênero Canis, sendo o lobo-cinzento a espécie mais conhecida, formando grupos coesos conhecidos como alcateias.</p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Macaco</h2>
+          <p>Os macacos, pertencentes à ordem dos primatas, são animais sociais e altamente inteligentes. Com mãos preênseis, cérebros desenvolvidos e caudas variáveis, os macacos exibem uma diversidade notável. Espécies como o macaco-prego e o chimpanzé são exemplos marcantes dessa ampla família.</p>
+        </section>
+        <section data-anime="show-right">
+          <h2>Leão</h2>
+          <p>Os leões, membros da família Felidae, são felinos majestosos e carnívoros conhecidos por suas crinas nos machos. Pertencentes ao gênero Panthera, o leão é o único felino social, vivendo em grupos chamados de "coalizões" que consistem em leões adultos e suas companheiras, marcando sua presença nas savanas africanas.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="grid-section faq" data-anime="scroll" id="faq">
+      <h1 class="titulo">FAQ</h1>
+      <dl class="faq-lista" data-anime="accordion">
+        <dt>Qual a idade dos animais?</dt>
+        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+        <dt>Eles são fantásticos?</dt>
+        <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
+        <dt>Qual a diferença?</dt>
+        <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
+        <dt>Como proteger?</dt>
+        <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
+      </dl>
+    </section>
+
+    <section class="grid-section contato" data-anime="scroll" id="contato">
+      <h1 class="titulo">Contato</h1>
+      <div class="mapa">
+        <img src="img/mapa.png">
+      </div>
+      <ul class="dados">
+        <li>rick-queiroz@live.com</li>
+        <li>+55 (11) 975862144</li>
+        <li>São Paulo - SP</li>
+      </ul>
+    </section>
+
+    <footer class="copy">
+      <p>Todos os direitos reservados.</p>
+    </footer>
+  </div>
+
+  <section class="modal-container" data-modal="container">
+     <div class="modal">
+        <button data-modal="fechar" class="fechar">X</button>
+        <form action="">
+          <label for="email">Email</label>
+          <input type="text" for="email" id="email">
+          <label for="senha">Senha</label>
+          <input type="password" for="senha" id="senha">
+          <button type="submit">Entrar </button>
+        </form>
+     </div>
   </section>
 
-  <section class="grid-section faq js-scroll" id="faq">
-    <h1 class="titulo">FAQ</h1>
-    <dl class="faq-lista js-accordion">
-      <dt>Qual a idade dos animais?</dt>
-      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-      <dt>Eles são fantásticos?</dt>
-      <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
-      <dt>Qual a diferença?</dt>
-      <dd>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte médio, caracterizados por um focinho comprido e uma cauda longa e peluda.</dd>
-      <dt>Como proteger?</dt>
-      <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos felídeos.</dd>
-    </dl>
-  </section>
-
-  <section class="grid-section contato js-scroll" id="contato">
-    <h1 class="titulo">Contato</h1>
-    <div class="mapa">
-      <img src="img/mapa.png">
-    </div>
-    <ul class="dados">
-      <li>rick-queiroz@live.com</li>
-      <li>+55 (11) 975862144</li>
-      <li>São Paulo - SP</li>
-    </ul>
-  </section>
-
-  <footer class="copy">
-    <p>Todos os direitos reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>  
+  <script type="module" src="js/script.js"></script>  
 </body>
 </html>
